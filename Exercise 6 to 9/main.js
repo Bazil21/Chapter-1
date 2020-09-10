@@ -1,47 +1,52 @@
-//Write a program that take two numbers & add them in a new variable. Show the result in your browser.
-var a = 5;
-var b = 10;
-var c = a + b;
-document.write("Sum of " + a +" and  "+ b +" "+ " is " +c +"<br>"+"<br>");
+var a = 10;
+document.write("Result:"+"<br>" + "The value of a : "+a+"<br>"+"<br>"+"............................."+"<br>"+"<br>")
+++a;
+document.write("The value of ++a is : " + a+"<br>")
+document.write("The value of ++a is : " + a+"<br>"+"<br>"+"<br>")
+document.write("The value of a++ is : " + a +"<br>")
+a++;
+document.write("Now the value of a++ is : " + a +"<br>"+"<br>")
+--a;
+document.write("The value of --a is : " + a +"<br>")
+document.write("Now the value of --a is : " + a+"<br>"+"<br>"+"<br>")
+document.write("The value of a-- is : " + a-- +"<br>")
+document.write("Now the value of a-- is : " + a +"<br>"+"<br>"+"<br>")
 
-var a = 20;
-var b = 10;
-var c = a - b;
-document.write("Subtraction of " + a +" and  "+ b +" "+ " is " +c +"<br>" +"<br>");
+var x = 2;
+var y = 1;
+document.write("x is : " + x +"<br>")
+document.write("y is : " + y +"<br>"+"<br>")
+var result = --x - --y + ++y + y--;
 
-var a = 50;
-var b = 10;
-var c = a / b;
-document.write("Division of " + a +" and  "+ b +" "+ " is " +c +"<br>" +"<br>");
-var a = 9;
-var b = 4;
-var c = a % b;
-document.write("Modulus of " + a +" and  "+ b +" "+ " is " +c +"<br>" +"<br>");
+document.write("Result is : " + result +"<br>"+"<br>")
+ var name = prompt("Enter Your Name!")
+ document.write("Welcome " + name + " Nice to Meet you Take Care."+ "<br><br>")
 
+document.write("''''''Multiplication Table'''''"+"<br>"+ "If user don't enter any number its show defualt table of 5."+"<br>"+"<br>")
+var num = prompt("Enter Number :")
+var num = parseInt(num) || 5;
+for(var i=1; i<=10;i++)
+{
+    document.write(num + "   *    " + i  + "   =   " + i*num + "<br>")
+}
 
-//Declare a variable.  b. Show the value of variable in your browser like “Value  after variable declaration is: ??”.
-var x;
-document.write("Value after variable declaration is "+x +"<br>" +"<br>");
-
-//c. Initialize the variable with some number. d. Show the value of variable in your browser like “Initial value: 5”.
- x = 5;
-document.write("Initial Value  " + x  +"<br>" +"<br>")
-
-//Increment the variable. f. Show the value of variable in your browser like “Value after increment is: 6”
- x++;
- document.write("Value After Increment :" + x +"<br>" +"<br>")
-
-//Add 7 to the variable.  h. Show the value of variable in your browser like “Value MATH EXPRESSIONS 
- //after addition is: 13”.
- x = x + 7
- document.write("Value After Addition : " +x +"<br>" +"<br>")
-
- //Show the value of variable in your browser like “Value after decrement is: 12”.
- x--;
- document.write("Value After Decrement : "+ x +"<br>" +"<br>")
- 
- // Show the remainder after dividing the variable’s value by 3.
- //Output : “The remainder is : 0”.
- x  = x / 3
- x = x % x
- document.write("Remainder after dividing the variables value by 3 : " + x)
+var sub1 = prompt("Enter First Subject : ")
+var sub2 = prompt("Enter Second Subject : ")
+var sub3 = prompt("Enter Third Subject : ")
+var totalmarks = 100;
+var obt1 = prompt("Enter Obtained Marks of First Subject: ")
+var obt2 = prompt("Enter Obtained Marks of Second Subject: ")
+var obt3 = prompt("Enter Obtained Marks of Third Subject: ")
+var obt1 = parseInt(obt1)
+var obt2 = parseInt(obt2)
+var obt3 = parseInt(obt3)
+var total = totalmarks*3;
+var persub1 = (obt1 / totalmarks)*100;
+ var persub2 = (obt2 / totalmarks)*100;
+var persub3 = (obt3 / totalmarks)*100;
+var total_obt = obt1 + obt2 + obt3;
+var total_per = ( total_obt / total) *100;
+document.write("<h3>Subjects     Total Marks    Obtained Marks      Percentage</h3>" + "<br>")
+document.write(sub1 +".............."+ totalmarks + "..................."+obt1 +"........................." + Math.round(persub1)+"%"+ "<br>"+sub2 +".............."+ totalmarks + "..................."+obt2 +"........................." +Math.round(persub2)+"%"+"<br>"+sub3 +".............."+ totalmarks + "..................."+obt3 +"........................." +Math.round(persub3)+"%"+"<br>")
+document.write("...............Total Result................<br>")
+document.write("..................." + total+"................"+total_obt+"......................."+Math.round( total_per) + "%")
